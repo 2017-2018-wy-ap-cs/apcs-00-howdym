@@ -1,0 +1,16 @@
+public class Banana extends Fruit { 
+  private int length = 0;
+  private int calcCal = 0;
+  
+  public Banana() { 
+    super(120,4.8); 
+    length = 8; 
+  } 
+  
+  public Banana(int l) { 
+    length = l; 
+    calcCal = 120/8 * l; 
+    super(calcCal, 40.8); 
+  } 
+  
+}

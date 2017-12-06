@@ -1,0 +1,12 @@
+public class Fruit { 
+  private int calories = 0; 
+  private double pH = 0.0; 
+  
+  public int getCalories() { 
+    return calories; 
+  } 
+  
+  public double getpH() { 
+    return pH; 
+  } 
+} 

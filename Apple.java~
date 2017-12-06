@@ -1,0 +1,16 @@
+public class Apple extends Fruit { 
+  private int calories = 0; 
+  private double pH = 0.0; 
+  
+  public apple() { 
+    super(93,3.4);
+  }
+  
+  public differentSizedApple(int c) { 
+    super(c, 3.4); 
+  } 
+  
+}
+  
+  
+  

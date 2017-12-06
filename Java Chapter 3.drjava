@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20160913-225446">
+  <project autorefresh="false" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="FruitList.java" package="" timestamp="06-Dec-2017 12:34:46">
+        <select from="650" to="650"/>
+        <scroll column="26" row="0"/>
+      </file>
+      <file name="Named.java" package="" timestamp="06-Dec-2017 11:43:20">
+        <select from="650" to="650"/>
+        <scroll column="26" row="0"/>
+      </file>
+      <file name="Fruit.java" package="" timestamp="06-Dec-2017 11:49:14">
+        <select from="650" to="650"/>
+        <scroll column="26" row="0"/>
+      </file>
+      <file name="Banana.java" package="" timestamp="06-Dec-2017 12:05:24">
+        <select from="650" to="650"/>
+        <scroll column="26" row="0"/>
+      </file>
+      <file name="Apple.java" package="" timestamp="06-Dec-2017 12:06:48">
+        <select from="650" to="650"/>
+        <scroll column="26" row="0"/>
+      </file>
+      <file name="Smoothie.java" package="" timestamp="06-Dec-2017 12:08:47">
+        <select from="650" to="650"/>
+        <scroll column="26" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath/>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>

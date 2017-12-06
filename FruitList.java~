@@ -1,0 +1,30 @@
+public class FruitList { 
+  private String name = null;
+  private Fruit fruit1 = null; 
+  private Fruit fruit2 = null; 
+  private Fruit fruit3 = null;
+  private FruitList basket = null;
+  
+  public FruitList(String s) { 
+    name = s; 
+    basket = FruitList(s);
+  } 
+  
+  public FruitList(String s, Fruit a, Fruit b, Fruit c) { 
+    name = s; 
+    fruit1 = a; 
+    fruit2 = b; 
+    fruit3 = c; 
+    basket = FruitList(s,a,b,c);
+  } 
+  
+  public Fruit addFruit(Fruit f) { 
+    basket = FruitList(name,f,fruit1,fruit2); 
+    return fruit3; 
+  } 
+  
+  public void print() { 
+    System.out.println(basket); 
+  }
+  
+}
