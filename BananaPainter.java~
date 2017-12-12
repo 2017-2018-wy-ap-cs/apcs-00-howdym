@@ -1,0 +1,20 @@
+public class BananaPainter extends Banana implements Painter { 
+  private int color = 0; 
+  
+  public BananaPainter(int l) { 
+    super(l); 
+  } 
+  
+  public void paint() { 
+    System.out.println(length); 
+  } 
+  
+  public int getColor() { 
+    // do nothing 
+  } 
+  
+  public void setColor() { 
+    // do nothing 
+  } 
+  
+}

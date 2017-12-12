@@ -1,0 +1,21 @@
+public class AbstractArtPainter implements Painter { 
+  private int color = 0; 
+  
+  public AbstractArtPainter() { 
+    color = 0; 
+  } 
+  
+  public void paint() { 
+    System.out.println(color); 
+  } 
+  
+  public void getColor() { 
+    return color; 
+  } 
+  
+  public int setColor(int x) { 
+    double randomDecimal = Math.random() * 100; 
+    return floor(randomDecimal); 
+  }
+  
+}

@@ -1,0 +1,15 @@
+public class AllBlackPainter implements Painter { 
+  private int color = 0; 
+  
+  public void paint() { 
+    // do nothing 
+  } 
+  
+  public int getColor() { 
+    return color; 
+  } 
+  
+  public void setColor(int x) { 
+    color = 0; 
+  } 
+}

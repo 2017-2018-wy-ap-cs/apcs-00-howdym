@@ -1,0 +1,12 @@
+public class BinaryPainter extends BasicPainter { 
+  private int color = 0; 
+  
+  @Override 
+  public void paint() { 
+    if (color < 127) { 
+      color = 0; 
+    } else { 
+      color = 255; 
+    }
+  }
+}

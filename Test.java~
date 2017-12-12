@@ -1,0 +1,14 @@
+public class Test { 
+  
+  public void main(String[args]) { 
+    Weather today = new SunnyDay(); 
+    Weather tomorrow = new RainyDay(30); 
+    today.forecast(); 
+    tomorrow.forecast(); 
+    tomorrow.actual(); 
+    Weather friday = new VeryCold(75); 
+    friday.forecast(); 
+    friday.actual(); 
+  } 
+
+}

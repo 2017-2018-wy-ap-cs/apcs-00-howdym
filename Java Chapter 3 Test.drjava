@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20160913-225446">
+  <project autorefresh="false" main="" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="VeryCold.java" package="" timestamp="12-Dec-2017 11:16:01">
+        <select from="178" to="178"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="Weather.java" package="" timestamp="12-Dec-2017 10:58:48">
+        <select from="178" to="178"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="SunnyDay.java" package="" timestamp="12-Dec-2017 11:06:16">
+        <select from="178" to="178"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="PrecipitationDay.java" package="" timestamp="12-Dec-2017 11:08:11">
+        <select from="178" to="178"/>
+        <scroll column="0" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath/>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>
