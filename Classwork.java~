@@ -1,0 +1,10 @@
+public class Classwork { 
+  public Classwork() { 
+    // do nothing 
+  } 
+  
+  public string removeDashes(string y) { 
+    return y.substring(0, 4) + y.substring(5, 7) + y.substring(8) 
+  } 
+  
+}
