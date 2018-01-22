@@ -1,0 +1,6 @@
+public class Jan9 {
+  public String tree(int h, int w) { 
+    int gaps = h/2 - 1; 
+    int shift = 
+  
+}

@@ -74,4 +74,18 @@ public class Classwork {
     return isPalindrome(cleanUp(w)); 
   } 
   
+  public static boolean isValidISBN(String isbn) { 
+    int total = 0;
+    for (int i = 0; i < isbn.length(); i++) { 
+      char x = isbn.charAt(i); 
+      int y = Character.digit(x, 10); 
+      if (i % 2 == 1) { 
+        total += 3 * y; 
+      } else { 
+        total += y; 
+      } 
+    } 
+    return total % 10 == 0; 
+  }
+  
 }
