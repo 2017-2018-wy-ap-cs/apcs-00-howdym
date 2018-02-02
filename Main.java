@@ -48,6 +48,9 @@ public class Main {
  gnil1("Bling", "Big gnilB",true);
  gnil1("Big", "BBig Guitar",true);
  gnil1("Tele", "TTele fone eleT", false);
+ gnil1("good", "Good", false);
+ gnil1("good", "good doog", false);
+ gnil1("good", "goodoog", false);
   }
   public static void alt1(int s, int e, int correct) {
  int ans = altSum(s,e);
@@ -101,7 +104,7 @@ public class Main {
     int d = b.indexOf(a); 
     return (((d == 1) || (d == 0)) && !(n == b.length() - a.length())) 
       || 
-      (!(d == 1) || (d == 0) && (n == b.length() - a.length()));
+      (!((d == 1) || (d == 0)) && (n == b.length() - a.length()));
   }
   
   public static int altSum (int start, int end) {

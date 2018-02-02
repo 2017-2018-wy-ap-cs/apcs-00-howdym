@@ -64,13 +64,29 @@ public class Main {
  alt1(50, 60, 50 - 53 + 59);
  alt1(51, 71, 51 - 54 + 57 - 60 + 66 - 69);
   }
- 
-// THIS IS WHERE YOU SHOULD EDIT AND PUT YOUR CODE
-//                         VVVVVVVVVVVVVVVVV
+
   public static boolean isGoodNecklace (String s) {
-    
-      
- return false;
+    String x = s; 
+    int pendantCounter = 0; 
+    for (int i = 0; i < s.length(); i++) { 
+      int n = x.indexOf("clasp"); 
+      String z = x.substring(n + 5); 
+      int y = z.indexOf("clasp") + 5; 
+      int a = x.indexOf("pendant"); 
+      int q = z.indexOf("clasp");
+      if (q == -1) { 
+        return pendantCounter % 2 == 0;
+      }
+      if (a < n) { 
+        x = x.substring(a + 7); 
+      } else if ((a > n + 5) && (a < y)) { 
+        pendantCounter += 1; 
+        x = x.substring(0,n+5) + x.substring(a + 7); 
+      } else { 
+        x = x.substring(y); 
+      }      
+    } 
+    return false; 
   }
  
   public static boolean gnil (String a, String b) { 
