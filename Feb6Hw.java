@@ -1,0 +1,50 @@
+// Homework Problems Feb. 6 2018 
+import java.util.*;
+
+public class Feb6Hw { 
+  public Feb6Hw() { 
+    // do nothing 
+  }
+
+// Question 1 
+// a) True, because the book said so. No reason why it shouldn't work. 
+// b) True, because the object is not bound to an ArrayList. 
+// c) False, it returns the removed value. 
+// d) False, the value just gets appended, the object isn't saved. 
+// e) True, an ArrayList can be duplicated, thus two varibles can refer to it. 
+
+// Question 2 
+// a) True, unused spaces still take up memory because those spaces need to be reserved. 
+// b) False, add(x) requires more space than the limit, thus requiring the list to be copied and reapplied, which is inefficient. 
+// c) False, same reason as above. 
+// d) True, don't need to search through as many spaces in the ArrayList. 
+
+// Question 3 
+// a, b 
+
+// Question 4 
+// [0, 1, 2] 
+
+// Question 5 
+  public static ArrayList<String> reverse(ArrayList<String> a) { 
+    ArrayList<String> answer = new ArrayList<String>(); 
+    for (String words: a) { 
+      answer.add(0, words); 
+    } 
+    return answer; 
+  } 
+
+// Question 6 
+  public static void removeSmallest(ArrayList<Integer> a) { 
+    Integer x = a.get(0); 
+    Integer y = 0;
+    for (int i = 0; i < a.size(); i++) { 
+      Integer z = a.get(i);
+      if (x.compareTo(z) > 0) { 
+        x = a.get(i); 
+        y = i;
+      } 
+    }
+    a.remove(y); 
+  }
+}

@@ -1,0 +1,34 @@
+import java.lang.*;
+import java.util.*;
+
+import org.junit.*;
+import org.junit.runner.*;
+import static org.junit.Assert.*; 
+
+public class Feb7Test { 
+  Feb7 x = new Feb7(); 
+  ArrayList<String> a = x.makeShopItems(); 
+  ArrayList<Integer> b = x.makeShopAmounts();
+  
+  @Test 
+  public void test1() {
+    assertArrayEquals(x.amountTotal(a, b, "banana"), 12);
+    assertArrayEquals(x.amountTotal(a, b, "rice"), 4);
+    assertArrayEquals(x.amountTotal(a, b, "turkey"), 4);
+    assertArrayEquals(x.amountTotal(a, b, "black beans"), 5);
+  }
+     
+    
+    ArrayList<String> shopItems = new ArrayList<String> ();
+    shopItems.add("banana");
+    shopItems.add("rice");
+    shopItems.add("turkey");
+    shopItems.add("banana");
+    shopItems.add("black beans");
+    
+    ArrayList<Integer> shopItems = new ArrayList<Integer> ();
+    shopItems.add(4);
+    shopItems.add(128);
+    shopItems.add(2);
+    shopItems.add(8);
+    shopItems.add(5);

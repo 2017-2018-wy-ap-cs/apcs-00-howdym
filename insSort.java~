@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class insSort { 
+  public insSort() { 
+    // do nothing 
+  } 
+  
+  public void addStuff(ArrayList<Integer> x, int y, int pivot) { 
+    x.add(y, x.get(pivot)); 
+    x.remove(pivot); 
+  } 
+  
+  public void iSort(ArrayList<Integer> x, int pivot) { 
+    int i = 0;
+    while (
+    

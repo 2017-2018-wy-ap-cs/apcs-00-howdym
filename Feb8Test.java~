@@ -1,0 +1,41 @@
+import java.lang.*;
+import java.util.*;
+
+import org.junit.*;
+import org.junit.runner.*;
+import static org.junit.Assert.*; 
+
+public class Feb8Test { 
+  Feb8 x = new Feb8(); 
+  ArrayList<String> onlyPigs = new ArrayList<String>(); 
+  ArrayList<String> onlyPig = new ArrayList<String>(); 
+  ArrayList<String> both = new ArrayList<String>(); 
+  
+  onlyPigs.add("pigs"); 
+  onlyPigs.add("pugs"); 
+  onlyPigs.add("pigs"); 
+  onlyPigs.add("pigs"); 
+  onlyPigs.add("Pocs"); 
+  onlyPigs.add("pigs"); 
+  
+  onlyPig.add("pig"); 
+  onlyPig.add("pig"); 
+  onlyPig.add("pork"); 
+  onlyPig.add("puc"); 
+  onlyPig.add("pig"); 
+  
+  both.add("pig"); 
+  both.add("pugs"); 
+  both.add("pigs"); 
+  both.add("puc"); 
+  both.add("pogs"); 
+  both.add("pigs"); 
+  both.add("pig"); 
+  
+  @Test 
+  public void test1() {
+    assertEquals(x.throddPigs(onlyPigs), false); 
+    assertEquals(x.throddPigs(onlyPig), true); 
+    assertEquals(x.throddPigs(both), false);
+  }
+}

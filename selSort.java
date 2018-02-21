@@ -1,0 +1,74 @@
+import java.util.*;
+
+public class selSort { 
+  public int[] w;
+  public int[] x; 
+  public int[] y; 
+  public int[] z;
+  
+  public static int[] makeA(int q) {
+    if (q == 0) { 
+      int[] a1 = new int[6]; 
+      a1[0] = 4; 
+      a1[1] = 8; 
+      a1[2] = 7; 
+      a1[3] = 2; 
+      a1[4] = 5; 
+      a1[5] = 1;  
+      return a1;
+    } else if (q == 1) { 
+      int[] a1 = new int[1]; 
+      a1[0] = 2; 
+      return a1;
+    } else if (q == 2) { 
+      int[] a1 = new int[2]; 
+      a1[0] = 3; 
+      a1[1] = 2;
+      return a1;
+    } else { 
+      int[] a1 = new int[8]; 
+      a1[0] = 98; 
+      a1[1] = 245; 
+      a1[2] = 64; 
+      a1[3] = 1; 
+      a1[4] = 542; 
+      a1[5] = 683; 
+      a1[6] = 778; 
+      a1[7] = 5;
+      return a1;
+    } 
+  }
+  
+  public selSort() { 
+    w = makeA(0); 
+    x = makeA(1); 
+    y = makeA(2); 
+    z = makeA(3);
+  } 
+  
+  public static void selectionSort(int[] data) { 
+    System.out.println(Arrays.toString(data));
+    for (int i = 0; i < data.length; i++) { 
+      int b = data[i]; 
+      int c = i;
+      for (int j = i; j < data.length; j++) { 
+        int a = data[j]; 
+        if (b > a) { 
+          b = a; 
+          c = j; 
+        } 
+      } 
+      int d = data[i]; 
+      data[i] = b; 
+      data[c] = d; 
+      System.out.println(Arrays.toString(data));
+    } 
+  }
+  
+  public static void main (String[] args) { 
+    selSort y = new selSort(); 
+    selectionSort(y.w);
+    System.out.println(Arrays.toString(y.w)); 
+  }
+                       
+}

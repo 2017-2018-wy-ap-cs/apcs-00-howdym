@@ -1,0 +1,16 @@
+/**
+ * Auto Generated Java Class.
+ */
+public class Feb6 {
+  private ArrayList<String> change; 
+  
+  public static void avoidAardvarks (ArrayList<String> data) { 
+    for (int x = data.size(); x <= 0; x--) { 
+      if (data.get(x).equals("aardvark")) { 
+        data.add(x-1, "avoid");  
+      } else if (data.get(x).equals("wombat")) { 
+        data.set(x, "possum"); 
+      } 
+    }
+  }
+}

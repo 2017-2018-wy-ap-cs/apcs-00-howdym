@@ -1,0 +1,19 @@
+/*import java.util.*;
+
+public class selStort { 
+  public selSort() { 
+    // do nothing 
+  } 
+  
+  public static ArrayList<String> makeA() {
+    ArrayList<Integer> a1 = new ArrayList<String>(); 
+    a1[0] = 4; 
+    a1[1] = 8; 
+    a1[2] = 7; 
+    a1[3] = 2; 
+    a1[4] = 5; 
+    a1[5] = 1;   
+    return a1; 
+  }
+  
+  public static int binS(ArrayList<String> data, String lookingFor, int start, int last) { */

@@ -1,0 +1,33 @@
+import java.lang.*;
+import java.util.*;
+
+import org.junit.*;
+import org.junit.runner.*;
+import static org.junit.Assert.*; 
+
+public class Feb6Test { 
+  Feb6 x = new Feb6(); 
+  
+  @Test 
+  public void test1() { 
+    ArrayList<String> exRes = new ArrayList<String>(); 
+    exRes.add("avoid"); 
+    exRes.add("aardvark"); 
+    exRes.add("possum"); 
+    exRes.add("stop"); 
+    exRes.add("stop"); 
+    exRes.add("possum"); 
+    exRes.add("stop"); 
+    exRes.add("avoid"); 
+    exRes.add("aardvark"); 
+    exRes.add("avoid"); 
+    exRes.add("aardvark"); 
+    exRes.add("stop"); 
+    exRes.add("stop"); 
+    exRes.add("avoid"); 
+    exRes.add("aardvark"); 
+    exRes.add("stop"); 
+    exRes.add("avoid"); 
+    exRes.add("aardvark");   
+    assertArrayEquals(exRes.toArray(), avoidAardvarks(change).toArray());
+  }

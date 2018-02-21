@@ -1,0 +1,45 @@
+import java.util.*;
+
+public class binSearch { 
+  public binSearch() { 
+    // do nothing 
+  } 
+  
+  public static ArrayList<String> makeA() {
+    ArrayList<String> a1 = new ArrayList<String>(); 
+    a1.add("alpha"); 
+    a1.add("beta"); 
+    a1.add("ceelo"); 
+    a1.add("delta"); 
+    a1.add("epsilon"); 
+    a1.add("feida"); 
+    a1.add("gamma");  
+    return a1; 
+  }
+  
+  public static int binS(ArrayList<String> data, String lookingFor, int start, int last) { 
+    int pivot = (start + last) / 2; 
+    System.out.println(pivot);
+    String a = data.get(pivot);
+    System.out.println(a);
+    if (a.compareTo(lookingFor) == 0) { 
+      System.out.println("it works");
+      System.out.println(pivot);
+      return pivot;
+    } else if (start == last) { 
+      return -1;
+    } else if (a.compareTo(lookingFor) > 0) { 
+      return binS(data, lookingFor, start, pivot - 1); 
+    } else if (a.compareTo(lookingFor) < 0) { 
+      return binS(data, lookingFor, pivot + 1, last); 
+    }
+    return -1; // this shouldn't happen
+  }
+ 
+  
+  public static void main (String[] args) { 
+    ArrayList<String> a = makeA();
+    binS(a, "gamma", 0, 6);
+    binS(a, "epsilon", 0, 6);
+  }
+}

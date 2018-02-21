@@ -1,0 +1,19 @@
+import java.util.*; 
+
+public class CC implements Comparable<T> { 
+  private int x; 
+  private int y; 
+  
+  public CC(int a, int b) { 
+    x = a; 
+    y = b; 
+  } 
+  
+  int compareTo(EBO z) { 
+    if (x != z.x) { 
+      return x - z.x; 
+    } else { 
+      return y - z.y; 
+    } 
+  } 
+}

@@ -1,0 +1,27 @@
+import java.lang.*;
+import java.util.*;
+
+import org.junit.*;
+import org.junit.runner.*;
+import static org.junit.Assert.*; 
+
+public class Feb8QuizTest { 
+  Feb8Quiz x = new Feb8Quiz(); 
+  
+  ArrayList<String> test1 = new makeList(0);
+  ArrayList<String> test2 = new makeList(1);
+  ArrayList<String> test3 = new makeList(2); 
+  ArrayList<String> test4 = new makeList(3);
+  ArrayList<String> answer1 = new makeAnswers(0); 
+  ArrayList<String> answer2 = new makeAnswers(1); 
+  ArrayList<String> answer3 = new makeAnswers(2);
+  ArrayList<String> answer4 = new makeAnswers(3);
+  
+  @Test 
+  public void test1() { 
+    assertArrayEquals(x.penguins(test1).toArray(), answers1);
+    assertArrayEquals(x.penguins(test2).toArray(), answers2);
+    assertArrayEquals(x.penguins(test3).toArray(), answers3);
+    assertArrayEquals(x.penguins(test4).toArray(), answers4);
+  }
+}

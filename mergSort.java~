@@ -1,0 +1,13 @@
+import java.util.*; 
+
+public class mergSort { 
+  ArrayList<Integer> a = new ArrayList<Integer>;
+  
+  public mergSort() { 
+    // do nothing 
+  } 
+  
+  public void meSort(ArrayList<Integer> b) { 
+    a = helper(b.subList(0, b.size/2), b.subList(b.size/2, b.size)); 
+  }
+}
