@@ -1,0 +1,25 @@
+import java.util.*; 
+import java.io.*; 
+
+public class wheresWaldo { 
+  
+  public wheresWaldo() { 
+    // do nothing
+  }
+
+  public static void main(String[] args) {
+    for (int i = 0; i < 10000; i++) {
+      int random = Math.random(0,1) * 1001; 
+      if (random == 1) { 
+        System.out.println("0000000000")
+      } else { 
+        String line = "";
+        for (int i = 0; i < 10; i++) { 
+          String randStr = Integer.toString(Math.random(0,1) * 11); 
+          line = randStr + line;
+        }
+        System.out.println(line); 
+      }
+    }
+  }
+}
