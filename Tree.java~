@@ -1,0 +1,19 @@
+import java.util.*; 
+import java.io.*; 
+
+public class Tree { 
+  public Tree() { 
+    // do nothing 
+  } 
+  
+  public static void makeTree(File f) { 
+    if (f.isDirectory()) { 
+      listFiles(f); 
+    } 
+  } 
+  
+  public static void main(String[] args) { 
+    File f = new File("../../Desktop"); 
+    makeTree(f); 
+  } 
+}
