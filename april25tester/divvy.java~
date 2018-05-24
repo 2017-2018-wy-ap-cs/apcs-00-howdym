@@ -1,0 +1,61 @@
+import java.util.*; 
+import java.io.*; 
+
+public class divvy { 
+  private ArrayList<BikeInfo> bikes = new ArrayList<BikeInfo>(); 
+  private File z; 
+  
+  public class divvy() { 
+    z = new File("./smalltrips.csv"); 
+    Scanner f = new Scanner(z);
+    counter = 0;
+    while (f.hasNextLine()) { 
+      if (counter != 0) { 
+        BikeInfo b = new BikeInfo(f.nextLine()); 
+        bikes.add(b); 
+      } else { 
+        counter++ 
+      } 
+    } 
+  }
+  
+  public static int findLongest() { 
+    int counter = 0
+    int result = 0; 
+    int tripTime = 0;
+    for (int x = 0; x < bikes.size(); x++) { 
+      if (bikes.get(x).getTripTime() > tripTime) { 
+        tripTime = bikes.get(x).getTripTime(); 
+        result = x; 
+      } 
+      counter++:
+    } 
+    System.err.println(counter + " lines were counted in " + f.getName()); 
+    return bikes.get(result).iD(); 
+    // 13518263
+  } 
+  
+  public static int findOldestWoman() { 
+    int counter = 0;
+    int result = 0; 
+    int birthYear = 0;
+    for (int x = 0; x < bikes.size(); x++) { 
+      BikeInfo current = bikes.get(x); 
+      if (current.isSubscriber()) { 
+        if (current.isFemale()) { 
+          if (birthYear == 0) { 
+            birthYear = current.dOfB(); 
+            result = x;
+          } else if (birthYear > current.dOfB()) { 
+            birthYear = current.dOfB(); 
+            result = x;
+          } 
+        } 
+      }
+      counter++;
+    }
+    System.err.println(counter + " lines were counted in " + f.getName());
+    return bikes.get(result).iD();
+    // 13517720
+  }
+    

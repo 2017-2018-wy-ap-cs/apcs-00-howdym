@@ -1,0 +1,17 @@
+import java.util.*; 
+
+public class PandPCC implements Comparable<CC> { 
+  private String x; 
+  private int y; 
+  
+  public PandPCC(String a, int b) { 
+    x = a; 
+    y = b; 
+  } 
+  
+  public int compareTo(CC z) { 
+    if (y != z.y) { 
+      return y - z.y; 
+    } 
+  } 
+}

@@ -1,0 +1,43 @@
+import java.util.*; 
+import java.io.*; 
+
+public class PandP { 
+  public PandP() { 
+    // do nothing 
+  } 
+  
+  public static String cleanup(String in) { 
+    String tmp = in.replaceAll("'-",""); 
+    String out = tmp.replaceAll("[^a-zA-Z]", ""); 
+    return out; 
+  }
+  
+  public static void main(String[] args) { 
+    Scanner sc = new Scanner(new File("PandD"));
+    Map<String, Integer> m = HashMap<String, Integer>(); 
+    
+    while (sc.hasNextLine()) { 
+      String s = sc.nextLine(); 
+      s = cleanup(s);
+      if (!m.containsKey(s)) { 
+        m.put(s, 1); 
+      } else { 
+        m.put(s, m.get(s) + 1); 
+      } 
+    } 
+    
+    Arrays.sort(m, new PandPCC()); 
+    Key<String> k = m.keySet();
+    int counter = 0; 
+    
+    for (String d: k) { 
+      System.out.println(d + ", " + m.get(d)); 
+      counter++; 
+      if (counter <= 10) { 
+        break; 
+      } 
+    } 
+  } 
+  
+}
+
