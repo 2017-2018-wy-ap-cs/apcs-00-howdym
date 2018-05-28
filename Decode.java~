@@ -1,0 +1,28 @@
+import java.util.*; 
+
+public class Decode { 
+  private TreeMap<decodeCC> frequent;
+  
+  public Decode() { 
+    Scanner sc = new Scanner(new File("encrptyed")); 
+    while (sc.hasNext()) { 
+      String temp = cleanup(sc.next()); 
+      for (int i = 0; i < temp.length(); i++) { 
+        String temp2 = temp.substring(i, i+1); 
+        if (frequent.containsKey(temp2)) { 
+          frequent.put(temp2, frequent.get(temp2) + 1); 
+        } else { 
+          frequent.put(temp2, 1); 
+        } 
+      } 
+    } 
+  } 
+  
+  
+  
+  public static String cleanup(String in) { 
+    String tmp = in.replaceAll("'-",""); 
+    String out = tmp.replaceAll("[^a-zA-Z]", ""); 
+    return out;
+  } 
+}

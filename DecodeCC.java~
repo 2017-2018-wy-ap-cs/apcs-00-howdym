@@ -1,0 +1,33 @@
+import java.util.*; 
+
+public class DecodeCC implements Comparable<DecodeCC> { 
+  private String s; 
+  private int x; 
+   
+  public DecodeCC(String a, int b) { 
+    s = a; 
+    x = b; 
+  } 
+  
+  public String getS() { 
+    return s; 
+  } 
+  
+  public int getX() { 
+    return x; 
+  } 
+  
+  public String toString() { 
+    return s + ", " + x; 
+  } 
+  
+  public int compareTo(DecodeCC d) { 
+    if (x != d.x) { 
+      return -(x - d.x); 
+    } else { 
+      return -(s.compareTo(d.s)); 
+    } 
+  } 
+  
+} 
+  
