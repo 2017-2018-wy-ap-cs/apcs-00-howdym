@@ -9,7 +9,6 @@ public class CookieMonster {
     Scanner f = new Scanner(g);
     int x = f.nextInt(); 
     int y = f.nextInt();
-    /*System.out.println(y);*/
     a = new CookiePackage[x][y]; 
     b = new CookiePackage[x][y];
     for (int i = 0; i < x; i++) { 
@@ -21,12 +20,21 @@ public class CookieMonster {
     System.out.println(Arrays.deepToString(a));
   }
   
+  public void negFill() { 
+    for (int i = 1; i < a.length; i++) { 
+      for (int j = 1; j < a[0].length; j++) { 
+        if (a[i-1][j].getInt() == -1 && a[i][j-1].getInt() == -1) { 
+          a[i][j] = new CookiePackage(a[i][j].getCoordinates(), -1); 
+        } 
+      } 
+    } 
+  }
+  
   public void checkRight(int i, int j) { 
     if (!(j + 1 >= a[1].length)) { 
       System.err.println("There");
       if (a[i][j].getInt() == -1 || a[i][j+1].getInt() == -1) { 
-        System.err.println("YA"); // error is right here
-        // do nothing 
+        // do nothing
       } else if (b[i][j+1] == null) { 
         b[i][j+1] = new CookiePackage(a[i][j].getCoordinates(), b[i][j].getInt() + a[i][j+1].getInt());
       } else if (b[i][j+1].getInt() < b[i][j].getInt() + a[i][j+1].getInt()) { 
@@ -37,7 +45,7 @@ public class CookieMonster {
   
   public void checkDown(int i, int j) { 
     if (!(i + 1 >= a.length)) {
-      if (a[i][j].getInt() == -1 || a[i+1][j].getInt() == -1) { 
+      if ((a[i][j].getInt() == -1 || a[i+1][j].getInt() == -1) && b[i+1][j] == null) { 
         // do nothing 
       } else if (b[i+1][j] == null) { 
         b[i+1][j] = new CookiePackage(a[i][j].getCoordinates(), b[i][j].getInt() + a[i+1][j].getInt());
@@ -48,6 +56,7 @@ public class CookieMonster {
   } 
   
   public void makeFlood() { 
+    negFill();
     for (int i = 0; i < a.length; i++) { 
       for (int j = 0; j < a[1].length; j++) { 
         if (i == 0 && j == 0) { 
